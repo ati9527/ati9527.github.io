@@ -33,24 +33,24 @@
 	$(".menu-container").jSideMenu({
 	    jSidePosition: "position-right",
 	    jSideSticky: true,
-	    jSideSkin: "endless-river",
+	    jSideSkin: "between-clouds",
 	     });
 	}); 
 	</script>
   <!--Google_Analytics-->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148408932-1#谷歌统计ID"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148408932-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-148408932-1#谷歌统计ID');
+  gtag('config', 'UA-148408932-1');
 </script>
 <!--baidu_analytics-->
 <script>
   var _hmt = _hmt || [];
   (function() {
     var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?cdc547581c5d3e054c66f9dea32bd754#百度统计ID";
+    hm.src = "https://hm.baidu.com/hm.js?cdc547581c5d3e054c66f9dea32bd754";
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
   })();
@@ -68,7 +68,9 @@
     <span>2019-09-20</span>
     <h2>注册</h2>
     <div class="tags"><i class="fa fa-tag"></i><a class="tag-link" href="/tags/动手/">动手</a></div>
-    </div>
+    <div class="social-links">
+<a href="https://github.com/ati9527" target="_blank"><i class="fa fa-github fa-fw"></i></a><a href="mailto:ati9527g@gmail.com"><i class="fa fa-envelope fa-fw"></i></a><a href="https://weibo.com/aati9527" target="_blank"><i class="fa fa-weibo fa-fw"></i></a><a href="https://youtube.com/channel/UCKyc-W2JjkYGxaq-QeNlO0w" target="_blank"></a><i class="fa fa-youtube-play fa-fw"></i>
+</div></div>
 </div>
 </div>
 <div id="lx-main-content">
@@ -112,7 +114,7 @@
 	</div>
 </div>
 </div>
-
+<div class="comment"><div id="comments"></div></div>
 <footer>
   <div>
   Copyright &copy; 2019.<a href="/">aati</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.blleng.cn" target="_blank">Lx</a><br>
@@ -132,7 +134,7 @@
         </div>
         <div class="row for-name">
           <p>ati9527</p>
-          <span class="tagline">Hello, World!</span>
+          <span class="tagline">地理，数码与生活</span>
         </div>
       </div>
     </span>
@@ -141,13 +143,7 @@
   <ul class="menu-items">
     <li><a href="/"><i class="fa fa-home fa-fw"></i>首页</a></li>
     <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>归档</a></li>
-    <li class="has-sub"><span class="dropdown-heading">
-      <i class="fa fa-bookmark fa-fw"></i>页面</span>
-        <ul>
-          <li><a href="/guestbook">留言</a></li>
-        <li><a href="/about">关于</a></li>
-        </ul>
-    </li>
+    
     <li class="has-sub"><span class="dropdown-heading">
       <i class="fa fa-link fa-fw"></i>友链</span>
         <ul>
@@ -166,6 +162,26 @@
 <script src="/js/jquery.stellar.min.js"></script>
 <script src="/js/main.js"></script>
 
+<script src="//unpkg.com/valine"></script>
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: '6DU4zpUCYBmYYGsEDV1pukVo-gzGzoHsz',
+    appKey: 'hIhmIy9jTjwS4dH9arcE0mxe',
+    placeholder: '此处留言',
+    avatar: 'identicon',
+    meta: guest,
+    pageSize: '10' || 10,
+    lang: 'zh-cn' || 'zh-cn'
+  });
+</script>
 
 </body>
 </html>
