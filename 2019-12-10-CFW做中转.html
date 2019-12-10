@@ -3,7 +3,7 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>注册 | 阿先生的工作坊</title>
+  <title>CFW做中转 | 阿先生的工作坊</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="ati9527">
   <meta name="keywords" content="Geo">
@@ -65,9 +65,9 @@
   <div class="overlay">
   <div class="page-title">
     <div class="avatar"><a href="/"><img src="/images/person_1.jpg"></a></div>
-    <span>2019-09-20</span>
-    <h2>注册</h2>
-    <div class="tags"><i class="fa fa-tag"></i><a class="tag-link" href="/tags/动手/">动手</a></div>
+    <span>2019-12-10</span>
+    <h2>CFW做中转</h2>
+    
     <div class="social-links">
 <a href="https://github.com/ati9527" target="_blank"><i class="fa fa-github fa-fw"></i></a><a href="mailto:ati9527g@gmail.com"><i class="fa fa-envelope fa-fw"></i></a><a href="https://weibo.com/aati9527" target="_blank"><i class="fa fa-weibo fa-fw"></i></a><a href="https://youtube.com/channel/UCKyc-W2JjkYGxaq-QeNlO0w" target="_blank"></a><i class="fa fa-youtube-play fa-fw"></i>
 </div></div>
@@ -77,11 +77,49 @@
   <div class="lx-post">
     <div class="lx-entry padding">
       <div>
-        <h1 id="注册github"><a href="#注册github" class="headerlink" title="注册github"></a>注册github</h1><p>今天搞了一天的blog搭建，hexo总是出奇奇怪怪的问题，而我也找不到去哪里解决这样的问题，本地可以，但是上传到github就是404。</p>
-<p><img src="https://pan.bambook.workers.dev/PIC/404.jpg" alt="404"></p>
-<p>Photo by <a href="https://unsplash.com/@nate_dumlao?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener">Nathan Dumlao</a> on <a href="https://unsplash.com/s/photos/404?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener">Unsplash</a></p>
-<hr>
-<p>更新：问题解决了，需要在GitHub里面改一下域名的设置，不然对不过去，试了试网上的其他办法，也不是很有效。</p>
+        <p>三分钟打造一个网页沙盒</p>
+<p>摘要：所见亦非实哦</p>
+<h2 id="什么是网页沙盒"><a href="#什么是网页沙盒" class="headerlink" title="什么是网页沙盒"></a>什么是网页沙盒</h2><p>沙盒（sandbox）在操作是一种按照安全策略限制程序行为的执行环境，是为了安全考虑，让程序运行在完全隔离的环境，无法与物理主机发生关系的一种技术。</p>
+<p>这里我们所说的网页沙盒则是指不需要重开浏览器即可打开一个无残留的网页环境，这也是与传统意义上的沙盒不同的地方。</p>
+<p>那么这个沙盒有什么好处呢？</p>
+<ol>
+<li>测试网站访问速度</li>
+<li>不需打开无痕模式等即可打开</li>
+<li>加速任意网站访问速度</li>
+<li>完全免费</li>
+</ol>
+<h2 id="技术实现"><a href="#技术实现" class="headerlink" title="技术实现"></a>技术实现</h2><p>那么如何实现这样的效果呢？</p>
+<p>这里我们需要借助cloudflare 的workers来部署。 说到这里我们要简单的说一说涉及到的几个名词。</p>
+<p>CDN</p>
+<p>CDN的全称是Content Delivery Network，即内容分发网络。是指一种通过互联网互相连接的电脑网络系统，利用最靠近每位用户的服务器，更快、更可靠地将音乐、图片、影片、应用程序及其他文件发送给用户，来提供高性能、可扩展性及低成本的网络内容传递给用户。简而言之就是广泛采用各种缓存服务器以提高我们访问速度的网络系统，全球各大互联网公司都有很积极的研究。</p>
+<p>cloudflare</p>
+<p>cloudflare 是一家国外的 CDN 加速服务商，还是很有名气的。提供免费和付费的加速和网站保护服务。百度云加速的国外节点就是和 cloudflare 合作使用的 cloudflare 的节点。</p>
+<p><code>CloudFlare Worker</code> 是 CloudFlare 的边缘计算服务。开发者可通过 JavaScript 对 CDN 进行编程，从而能灵活处理 HTTP 请求。这使得很多任务可在 CDN 上完成，无需自己的服务器参与。</p>
+<h2 id="三分钟实战"><a href="#三分钟实战" class="headerlink" title="三分钟实战"></a>三分钟实战</h2><p>首先就是注册账号了，这是绕不开的。</p>
+<p>打开cloudflare.com，点击sign up。</p>
+<p>这里输入邮箱，密码即可。</p>
+<p>此时你的邮箱里会收到一封Email用于验证，点击链接即可。</p>
+<p>邮箱验证完成后，点击continue to dashboard 来到我们账号的管理界面。点击workers，进入设置界面。</p>
+<p>在这里输入subdomain，当然是自己喜欢什么输入什么了。</p>
+<p>接下来就是选择我们的workers plan了，免费的计划中包含了每日100,000次的请求，足够使用了。</p>
+<p>新建一个worker。</p>
+<p>这里我们使用<a href="https://github.com/EtherDream" target="_blank" rel="noopener">EtherDream</a>大佬的脚本，即可一键部署，下载链接在文末或者阅读原文即可。</p>
+<p>复制 <a href="https://raw.githubusercontent.com/EtherDream/jsproxy/master/cf-worker/index.js" target="_blank" rel="noopener">index.js</a> 里的代码到左侧的代码框。</p>
+<p>如果顺利的话，页面应该是这个样子的。可以修改左上角的名字，让它变得好记一点。</p>
+<p>最后点击’save and depoly‘就成功部署了！访问的时候我们就需要打开自定义的名字，比如我的就是<a href="https://sandbox.ati666.workers.dev/这样子的。" target="_blank" rel="noopener">https://sandbox.ati666.workers.dev/这样子的。</a></p>
+<p>让我们来测试一下效果。</p>
+<p>出现这样的界面就是成功了！</p>
+<p>当然这个方法不是完美的，</p>
+<ol>
+<li>网页没有办法实现登陆操作等</li>
+<li>WebSocket 代理尚未实现</li>
+<li>外链限制尚未实现</li>
+<li>每日访问限制100,000次，大规模使用是不可能的啦</li>
+<li>访问速度与网络环境有关</li>
+</ol>
+<p>ok，今天的分享就到这里了，大家块动手搞起来，搭一个自己的浏览器沙盒吧。</p>
+<p>这里放上我的测试地址：</p>
+<p>sandbox.ati666.workers.dev（复制到浏览器打开哦）</p>
 
       </div>
     </div>
@@ -90,12 +128,12 @@
 <div class="lx-navigation">
 	<div class="lx-cover prev lx-cover-sm" style="background-image: url(/images/footer_1.jpg)">
 		<div class="overlay"></div>
-		<a class="copy" href="/2019-12-10-给浏览器插上翅膀1.html">
+		<a class="copy" href="/2019-12-10-都是上网，咋你就要上天？.html">
 			<div class="display-t">
 				<div class="display-tc">
 					<div>
 						<span>Next</span>
-						<h3></h3>
+						<h3>都是上网，咋你就要上天？</h3>
 					</div>
 				</div>
 			</div>
@@ -103,12 +141,12 @@
 	</div>
         <div class="lx-cover next lx-cover-sm" style="background-image: url(/images/footer_2.jpg)">
 		<div class="overlay"></div>
-		<a class="copy" href="/2019-09-20-test.html">
+		<a class="copy" href="/2019-12-10-给浏览器插上翅膀1.html">
 			<div class="display-t">
 				<div class="display-tc">
 					<div>
 						<span>Prev</span>
-						<h3>凑数</h3>
+						<h3></h3>
 					</div>
 				</div>
 			</div>

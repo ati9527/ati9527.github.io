@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>阿先生的工作坊</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="ati9527">
+  <meta name="keywords" content="Geo">
+  <meta name="description" content="热爱生活">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'lx',
+    version: '1.4.5',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: '-'
+  };
+</script>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "moonlit",
+	     });
+	}); 
+	</script>
+  <!--Google_Analytics-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150907473-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-150907473-1');
+</script>
+<!--baidu_analytics-->
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?3465f439c3ba49657a622bee3c78a3a8";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300|Noto+Serif+SC&amp;display=swap">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+</head>
+<body>
+<div class="single">
+<div id="page">
+<div id="lx-aside" style="background-image: url(/images/page-cover.jpg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/"><img src="/images/person_1.jpg"></a></div>
+    <span>2019-12-10</span>
+    <h2></h2>
+    
+    <div class="social-links">
+<a href="https://github.com/ati9527" target="_blank"><i class="fa fa-github fa-fw"></i></a><a href="mailto:ati9527g@gmail.com"><i class="fa fa-envelope fa-fw"></i></a><a href="https://weibo.com/aati9527" target="_blank"><i class="fa fa-weibo fa-fw"></i></a><a href="https://youtube.com/channel/UCKyc-W2JjkYGxaq-QeNlO0w" target="_blank"></a><i class="fa fa-youtube-play fa-fw"></i>
+</div></div>
+</div>
+</div>
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <h1 id="给浏览器插上翅膀"><a href="#给浏览器插上翅膀" class="headerlink" title="给浏览器插上翅膀"></a>给浏览器插上翅膀</h1><p>之 chrome 插件安装篇</p>
+<p><strong>浏览器</strong>可以说是我们网上冲浪离不开的伙伴了，我们浏览网页需要它，查找资料需要它，毫不夸张的说，浏览器是我们网络生活最重要的入口。</p>
+<p>那么，不知道各位有没有想过，到底是<strong>自己在用浏览器，还是浏览器在用自己</strong>？</p>
+<ul>
+<li><p>最先打开的导航网站，咋就那么多广告？</p>
+</li>
+<li><p>经常出现的弹窗广告到底是谁在砍渣渣辉？</p>
+</li>
+<li><p>我只是装个浏览器，怎么你全家都来了？</p>
+</li>
+<li><p>我打开个<code>996.icu</code> ，怎么就根据国家法律法规，本页面禁止访问了呢？</p>
+</li>
+</ul>
+<p>如果你也有过这样的苦恼，有没有想过<strong>改变一下</strong>呢？</p>
+<h2 id="浏览器分类"><a href="#浏览器分类" class="headerlink" title="浏览器分类"></a>浏览器分类</h2><p>首先我们先来说说市面上有什么浏览器，常见的搜狗浏览器，360浏览器，猎豹浏览器，谷歌浏览器，火狐浏览器还有IE等等。</p>
+<p>但是，我们要透过外壳看本质，就是浏览器的<strong>内核</strong>是什么？</p>
+<p>内核又是什么呢？内核就是<code>浏览器的渲染引擎和JS引擎</code>。就是如何把网页呈现出来的最核心的处理部分，内核决定了网页的显示效果。</p>
+<p>现在市面上主要有<strong>5种内核</strong>。</p>
+<p><img src="https://imgkr.cn-bj.ufileos.com/af76bdc7-8d0b-4765-b5a6-d813092ac611.png" alt="5大内核代表"></p>
+<ol>
+<li><p>Trident(IE内核)</p>
+<p>这个内核是IE所使用的内核，到今天已经不适应现代网络生活了，但你必须留着登陆某些网站。</p>
+<p>代表：IE浏览器，各种双核浏览器中的兼容模式内核，win10中的Edge（跟IE不太一样）</p>
+</li>
+<li><p>Gecko</p>
+<p><code>Firefox</code>，火狐浏览器使用的内核，完全<strong>开源</strong>，因此其也是Linux各发行版中的默认桌面浏览器。</p>
+<p>代表：<code>Firefox</code> 及以firefox为基础开发的浏览器（比如<code>Tor</code>浏览器）</p>
+</li>
+<li><p>webkit</p>
+<p>Webkit内核是用于苹果<code>safari</code>浏览器的内核，其分支Blink被用于基于于<a href="https://zh.wikipedia.org/wiki/Chromium" target="_blank" rel="noopener">Chromium</a>的网页浏览器。手机上的移动浏览器很多也是webkit的。</p>
+<p>代表：Safari，2013年之前的chrome</p>
+</li>
+<li><p>blink</p>
+<p>在 <code>Chromium</code> 项目中研发的 Blink 内核，内置于 <code>Chrome</code> 浏览器之中，同样的<code>chromium</code>内核是<strong>开源</strong>的，也就意味着任何人可以对其进行更改并发布新版本。</p>
+<p>代表：<code>Google chrome</code>，大部分国产浏览器（包括360极速浏览器，猎豹浏览器等）</p>
+</li>
+<li><p>Presto</p>
+<p><code>opera</code> 浏览器的“前”内核，因为新版已经投入<code>chromium</code>的怀抱了。</p>
+<p>代表：opera 2013年之前的版本，及其衍生版本。</p>
+<blockquote>
+<p>opera 本身是一个非常先进的浏览器，为业界贡献了CSS , Speed dial，opera turbo等一批先进技术。2016年被360和昆仑携手收购了，令人唏嘘。</p>
+</blockquote>
+</li>
+</ol>
+<p>放一张2009年到2019年浏览器占有率图吧,数据来源 <code>statcounter</code>.</p>
+<p><img src="https://imgkr.cn-bj.ufileos.com/274573fb-e8e0-44ea-ab00-96f55d088f2e.png" alt="2009-2019浏览器市场占有率"></p>
+<h2 id="Why-Chrome？"><a href="#Why-Chrome？" class="headerlink" title="Why Chrome？"></a>Why Chrome？</h2><p>为什么推荐使用<code>Google chrome</code>作为日常的浏览器呢？</p>
+<p>首先就是它占有了市面上<strong>65%的份额</strong>，是目前全球使用范围最广的浏览器，这也就意味着，你使用chrome 可以获得<strong>更好的兼容性</strong>，可以获得更好的浏览体验。</p>
+<p>其次，<code>Google chrome</code>能成为全球占有率第一的浏览器，自然有其过人之处。那就是，<strong>简洁，快速，安全，高效</strong>。</p>
+<p>不要问我为啥不用国产的浏览器呢？ 问就是<strong>个人喜好</strong>。</p>
+<p><img src="https://imgkr.cn-bj.ufileos.com/d0f1f29f-dcd8-4259-8d23-3597ec4572f0.png" alt="chrome logo"></p>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>首先要做的自然就是下载谷歌浏览器了。</p>
+<p><code>https://www.google.cn/intl/zh-CN/chrome/googlebuiltin/</code></p>
+<p>打开谷歌浏览器的中文官方网站就可以下载了。</p>
+<p><img src="https://imgkr.cn-bj.ufileos.com/a83ff0ad-d45b-4752-831d-41b75ee3e25d.png" alt="chrome官网"></p>
+<p>当然，如果你觉得不放心（<del>可能因为觉得是中文版？</del>），你可以去google chrome 的国际官网下载，或者下载<strong>离线安装包</strong>。</p>
+<blockquote>
+<p><strong>离线安装包</strong>更便携，不受网络的影响，双击就完成安装。</p>
+</blockquote>
+<p>下载地址：在<strong>公众号后台</strong>回复<code>chrome</code>即可获得下载地址。</p>
+<p><img src="https://imgkr.cn-bj.ufileos.com/24536ee5-df06-48b0-8112-038b6458c65e.png" alt="离线下载"></p>
+<p>下载<strong>稳定版</strong>就行了。</p>
+<p>安装很简单，双击之后等着就好了，视电脑配置不同打开时间长短不一，一般30秒之内。</p>
+<p><img src="https://imgkr.cn-bj.ufileos.com/03fe8185-7111-4028-bcd3-dea9f13f0e85.png" alt="欢迎界面"></p>
+<h2 id="起飞前的准备"><a href="#起飞前的准备" class="headerlink" title="起飞前的准备"></a>起飞前的准备</h2><p>安装好了之后，我们会发现<code>chrome</code>的窗口干净的很，<strong>啥子玩意都没有</strong>。刚打开的<code>Chrome</code>甚至可以说有点简陋。</p>
+<p>如果你开始浏览网页之后，你会发现，跟之前使用的浏览器并没有什么区别，那么，让<code>chrome</code> 起飞的东西是什么呢？</p>
+<p>就是<strong>插件 or 扩展程序（Extension）</strong>。</p>
+<p>顾名思义，就是可以可以扩<strong>展浏览器功能</strong>的组件了，只有加上了插件的<code>chrome</code>才是海陆空全能战舰，没有插件的<code>chrome</code>充其量也就是辆保时捷。</p>
+<p>那么我们从<strong>哪里</strong>插上插件这个翅膀呢？</p>
+<p>最官方的途径自然是<strong>chrome 网上应用商店</strong>了。</p>
+<p><img src="https://imgkr.cn-bj.ufileos.com/f0a3a093-62ca-46a0-b03a-64d0bdd28f27.png" alt="网上应用商店"></p>
+<blockquote>
+<p>如果条件允许，最好所有的扩展程序都从官方商店上下载。</p>
+</blockquote>
+<p>限于我们<strong>特殊的网络环境</strong>，我们没有办法直接访问chrome的网上应用商店，我们只能借助<strong>第三方商店</strong>来<strong>曲线救国</strong>了。</p>
+<h2 id="插上翅膀"><a href="#插上翅膀" class="headerlink" title="插上翅膀"></a>插上翅膀</h2><p>第三方商店多如牛毛，我们该用哪个呢？</p>
+<p>这里，我推荐 CRX4chrome。<del>因为这是个可以直连的国外网站</del>。</p>
+<p>主页如图</p>
+<p><img src="https://imgkr.cn-bj.ufileos.com/6350dc11-05c2-4372-b06b-8a59a4f483c3.png" alt="CRX4CHROME"></p>
+<p>我们以图上第一个<code>setupxxx</code>为例，这个插件的作用非常简单，就是可以把你上网的流量加密，达到<strong>保护隐私</strong>的目的，我们就以这个为例进行<strong>示范</strong>。</p>
+<p>点击进入页面，下滑到下载界面，这里我们选择‘ Download crx file from <a href="https://www.crx4chrome.com/go.php?p=36007&s=1&l=https%3A%2F%2Ff2.crx4chrome.com%2Fcrx.php%3Fi%3Doofgbpoabipfcfjapgnbbjjaenockbdp%26v%3D3.8.2" target="_blank" rel="noopener">crx4chrome &gt;</a>’ 。</p>
+<p><img src="https://imgkr.cn-bj.ufileos.com/306f4d9d-42a8-4a71-a59d-141551f075c2.png" alt="下载"></p>
+<p><img src="https://imgkr.cn-bj.ufileos.com/bed13846-2d66-4922-a17e-5bf3ebe459d5.png" alt="下载界面"></p>
+<p>我们会得到一个<strong>crx后缀</strong>的文件，这个就是chrome插件的本体了。</p>
+<p>来到谷歌浏览器，打开右上角三个点—更多工具——扩展程序，来到扩展程序管理界面。</p>
+<p>由于谷歌更改了<strong>插件的安装机制</strong>，我们并不能直接安装。需要打开右上角的<strong>开发者模式</strong>。将crx结尾的插件本体<strong>拉进来</strong>即可安装。</p>
+<p>安装过程如图：</p>
+<p><img src="https://imgkr.cn-bj.ufileos.com/660e0a63-6107-498c-800a-f3f61a65958c.gif" alt="安装第三方插件"></p>
+<p>安装完成之后，我们点击右上角的<strong>云朵图标</strong>，<code>setupxxx</code>的界面就出来了。选择自己喜欢的语言即可进入主界面。</p>
+<p><img src="https://imgkr.cn-bj.ufileos.com/bdeefca8-ae5b-4455-950f-3ff2b71a21fd.png" alt="主界面"></p>
+<p>没有账号的同学点击下方的注册按钮注册一个账号即可。</p>
+<p><strong>（经测试随便填都可以，不会验证邮箱）</strong></p>
+<p><img src="https://imgkr.cn-bj.ufileos.com/49003543-7553-4040-9192-f0baa9b611c0.png" alt="注册"></p>
+<p>输入邮箱密码之后就进入了主界面了。</p>
+<p><img src="https://imgkr.cn-bj.ufileos.com/b07d8eda-3eb5-412c-9629-b16ad7d3328c.png" alt="真·主界面"></p>
+<p>这里我们可以看到出现了很多国家，这个意思是可以<strong>把我们上网的流量变成从这些国家发出的</strong>，达到<strong>保护隐私</strong>的目的。<del>顺便还可以访问chrome的官方商店</del>。</p>
+<p><img src="https://imgkr.cn-bj.ufileos.com/083f9b9b-c9ee-4906-b526-bb061d6ef898.png" alt="保护隐私目的达成！"><br>我们来测试一下</p>
+<p><img src="https://imgkr.cn-bj.ufileos.com/0ad89d1b-2f0c-438e-b40b-2ddf9a4490d8.png" alt="测试一下"></p>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><p>到这里，打造自己的浏览器第一篇就算完成了，你已经给你的浏览器插上了一双<strong>飞不了太快的翅膀</strong>。</p>
+<p>到后面，我们再来慢慢让<code>chrome</code>浏览器变成大杀四方的杀器！</p>
+<p>我们，下次再见，我是阿嚏。</p>
+<blockquote>
+<p>PS：火狐也是一款非常优秀的浏览器，一直都在我的电脑里做备胎。</p>
+</blockquote>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(/images/footer_1.jpg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/2019-12-10-CFW做中转.html">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>CFW做中转</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(/images/footer_2.jpg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/2019-09-20-注册.html">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>注册</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+</div>
+<div class="comment"><div id="comments"></div></div>
+<footer>
+  <div>
+  Copyright &copy; 2019.<a href="/">阿先生的工作坊</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.blleng.cn" target="_blank">Lx</a><br>
+  </div>
+</footer>
+</div>
+
+<button class="menu-trigger"></button>
+<div class="menu">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="/images/person_1.jpg" alt="ati9527"></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>ati9527</p>
+          <span class="tagline">地理，数码与生活</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>首页</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+    
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>友链</span>
+        <ul>
+          <li> <a href="https://lx.blleng.cn" target="_blank">Theme-Lx</a></li>
+        </ul>
+    </li>
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="/js/jquery.easing.min.js"></script>
+<script src="/js/jquery.waypoints.min.js"></script>
+<script src="/js/jquery.stellar.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+</body>
+</html>
